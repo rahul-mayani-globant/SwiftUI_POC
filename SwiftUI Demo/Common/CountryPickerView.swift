@@ -25,9 +25,7 @@ struct CountryPickerView: View {
                 Text(data[index].rawValue.capitalized)
             }
         }
-        .frame(width: 250, height: 200)
         .pickerStyle(WheelPickerStyle())
-        .presentationCompactAdaptation(.none)
         .onChange(of: selectedIndex, perform: { newValue in
             value = data[newValue].rawValue.capitalized
         })

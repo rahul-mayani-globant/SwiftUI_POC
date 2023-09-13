@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A25778292AB024CC00F7644A /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25778282AB024CC00F7644A /* KeyboardReadable.swift */; };
+		A26ED7342AB1855F002FF41B /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = A26ED7332AB1855F002FF41B /* BottomSheet */; };
 		A27A90802AAAE3E200EF015D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A907F2AAAE3E200EF015D /* ProfileModel.swift */; };
 		A27A90822AAAEEC300EF015D /* ProfileGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A90812AAAEEC300EF015D /* ProfileGridView.swift */; };
 		A27A90842AAB049200EF015D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A90832AAB049200EF015D /* ProfileViewModel.swift */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26ED7342AB1855F002FF41B /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +213,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI Demo";
+			packageProductDependencies = (
+				A26ED7332AB1855F002FF41B /* BottomSheet */,
+			);
 			productName = "SwiftUI Demo";
 			productReference = A2D6895C2AA717A600A04146 /* SwiftUI Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +244,9 @@
 				Base,
 			);
 			mainGroup = A2D689532AA717A600A04146;
+			packageReferences = (
+				A26ED7322AB1855F002FF41B /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = A2D6895D2AA717A600A04146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -429,10 +437,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.globant.SwiftUIDemoApp.SwiftUI-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,10 +473,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.globant.SwiftUIDemoApp.SwiftUI-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A26ED7322AB1855F002FF41B /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamfootdev/BottomSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A26ED7332AB1855F002FF41B /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A26ED7322AB1855F002FF41B /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2D689542AA717A600A04146 /* Project object */;
 }

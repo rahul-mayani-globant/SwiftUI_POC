@@ -19,8 +19,6 @@ struct DatePickerView: View {
     
     var body: some View {
         DatePicker(String(), selection: $selectedDate, in: ...Date.now, displayedComponents: .date)
-            .presentationCompactAdaptation(.none)
-            .frame(width: 300, height: 400)
             .datePickerStyle(GraphicalDatePickerStyle())
             .onChange(of: selectedDate, perform: { value in
                 self.value = formattedDate

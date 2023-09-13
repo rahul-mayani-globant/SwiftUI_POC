@@ -16,7 +16,7 @@ struct EditProfileView: View {
     @State private var showImagePicker: Bool = false
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             Spacer(minLength: 20)
             
             VStack(spacing: 20) {
@@ -48,7 +48,6 @@ struct EditProfileView: View {
             
             Spacer(minLength: 50)
         }
-        .scrollIndicators(.hidden)
         .modifier(DismissingKeyboard())
     }
 }

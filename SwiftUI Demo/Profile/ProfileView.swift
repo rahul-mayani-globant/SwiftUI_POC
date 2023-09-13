@@ -13,8 +13,8 @@ struct ProfileView: View {
     @State private var selectedTab: TextTabBar.Tab = .photos
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        NavigationView {
+            ScrollView(showsIndicators: false) {
                 Image(viewModel.userData.coverImage)
                     .resizable()
                 
@@ -68,7 +68,6 @@ struct ProfileView: View {
                 ProfileGridView(data: viewModel.photos)
                     .offset(y: -40)
             }
-            .scrollIndicators(.hidden)
             .edgesIgnoringSafeArea([.top])
         }
         .onChange(of: selectedTab) { newValue in

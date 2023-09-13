@@ -35,8 +35,6 @@ struct SettingsView: View {
                     .modifier(SectionHeaderStyle())
                 }
             }
-            .scrollIndicators(.hidden)
-            .scrollContentBackground(.hidden)
             .listStyle(.insetGrouped)
             .navigationTitle(data.title)
         }

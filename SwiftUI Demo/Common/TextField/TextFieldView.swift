@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct TextFieldView: View {
     let title: String
@@ -56,7 +57,11 @@ struct TextFieldView: View {
                     isShowDropdown.toggle()
                 }
             }
-            .popover(isPresented: $isShowDropdown, arrowEdge: .trailing) {
+            .bottomSheet(isPresented: $isShowDropdown,
+                         prefersGrabberVisible: true,
+                         prefersScrollingExpandsWhenScrolledToEdge: true,
+                         prefersEdgeAttachedInCompactHeight: false,
+                         widthFollowsPreferredContentSizeWhenEdgeAttached: false) {
                 if type.dropdownType == .dob {
                     DatePickerView(value: $value)
                 } else {
@@ -71,7 +76,7 @@ struct TextFieldView: View {
 struct TextField_Previews: PreviewProvider {
     @State static private var value = String()
     static var previews: some View {
-        TextFieldView(title: "Name", placeHolder: "Joy", type: .name, value: value)
+        TextFieldView(title: "Name", placeHolder: "Joy", type: .dropdown(.country), value: value)
             .frame(maxHeight: 70)
             .padding()
             .previewLayout(.sizeThatFits)
